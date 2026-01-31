@@ -7,7 +7,6 @@ The goal is not only to train a YOLOv8 model, but also to **analyze robustness, 
 
 > This project was developed as part of an academic course and extended as a practical computer vision case study.
 
----
 
 ## Dataset
 - **Source:** Microsoft COCO (Roboflow v2, CC BY 4.0)
@@ -16,7 +15,6 @@ The goal is not only to train a YOLOv8 model, but also to **analyze robustness, 
 - **Structure:** Standard YOLO format with `data.yaml` configuration
 - **Challenge:** Occlusion, scale variation, cluttered backgrounds
 
----
 
 ## Baseline Training
 - **Model:** YOLOv8n (≈3M parameters)
@@ -37,7 +35,7 @@ The goal is not only to train a YOLOv8 model, but also to **analyze robustness, 
 
 Stable convergence was observed. Recall limitations mainly affect **small or partially occluded objects** such as *cell phone* and *chair*.
 
----
+
 
 ## Hyperparameter Experiments
 Two controlled experiments were conducted while keeping all other parameters fixed.
@@ -54,7 +52,7 @@ Two controlled experiments were conducted while keeping all other parameters fix
 - Increasing batch size improves **training efficiency**, with limited accuracy gains.
 - Resolution scaling introduces a clear **accuracy vs latency trade-off**.
 
----
+
 
 ## Data Augmentation Study
 Three augmentation strategies were evaluated using the same architecture and dataset split.
@@ -70,7 +68,7 @@ Three augmentation strategies were evaluated using the same architecture and dat
 - Task-specific augmentation achieves the **best robustness–accuracy balance**.
 - Overly strong augmentation can degrade performance in **lightweight models** such as YOLOv8n.
 
----
+
 
 ## Model Export & Deployment
 The best-performing model (imgsz=768) was exported to ONNX.
@@ -91,7 +89,7 @@ Accuracy remains almost unchanged after conversion.
 
 ONNX inference is slightly slower under default runtime settings, highlighting the importance of runtime optimization.
 
----
+
 
 ## Real-World Inference
 The model was evaluated beyond the dataset split:
@@ -105,7 +103,7 @@ The model was evaluated beyond the dataset split:
 - Low contrast regions
 - Complex backgrounds
 
----
+
 
 ## Key Takeaways
 - Data augmentation must be **task-aware and model-capacity-aware**.
@@ -114,7 +112,7 @@ The model was evaluated beyond the dataset split:
 - ONNX export preserves accuracy but requires runtime tuning.
 - Validation behavior aligns well with real-world inference patterns.
 
----
+
 
 ## Quickstart
 ```bash
