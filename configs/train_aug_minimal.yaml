@@ -1,0 +1,28 @@
+model: yolov8n.pt
+data: data/coco6/data.yaml
+epochs: 10
+imgsz: 640
+batch: 8
+device: 0
+project: runs/augment
+name: aug_minimal_20e
+optimizer: auto
+seed: 0
+deterministic: true
+
+mosaic: 0.2
+fliplr: 0.2
+hsv_h: 0.0
+hsv_s: 0.0
+hsv_v: 0.0
+translate: 0.0
+scale: 0.0
+degrees: 0.0
+shear: 0.0
+perspective: 0.0
+mixup: 0.0
+copy_paste: 0.0
+auto_augment: null
+erasing: 0.0
+
+close_mosaic: 10

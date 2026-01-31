@@ -1,0 +1,12 @@
+model: yolov8n.pt
+data: data/coco6/data.yaml
+
+epochs: 20
+imgsz: 768        
+batch: 8
+
+device: 0
+project: runs
+name: exp_imgsz768
+patience: 20
+workers: 4

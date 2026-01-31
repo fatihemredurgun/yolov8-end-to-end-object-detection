@@ -1,0 +1,11 @@
+path: data/coco6
+train: train/images
+val: val/images
+nc: 6
+names:
+- person
+- cat
+- cell phone
+- sports ball
+- bottle
+- chair

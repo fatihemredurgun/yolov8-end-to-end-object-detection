@@ -1,0 +1,29 @@
+model: yolov8n.pt
+data: data/coco6/data.yaml
+epochs: 10
+imgsz: 640
+batch: 8
+device: 0
+project: runs/augment
+name: aug_aggressive_20e
+optimizer: auto
+seed: 0
+deterministic: true
+
+# Aggressive augment
+mosaic: 1.0
+fliplr: 0.5
+hsv_h: 0.015
+hsv_s: 0.7
+hsv_v: 0.4
+translate: 0.1
+scale: 0.5
+degrees: 10.0
+shear: 2.0
+perspective: 0.0
+mixup: 0.1
+copy_paste: 0.0
+auto_augment: randaugment
+erasing: 0.4
+
+close_mosaic: 10
